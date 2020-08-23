@@ -3,11 +3,15 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		C62B3AA124F216B300C1748A /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62B3AA024F216B300C1748A /* main.swift */; };
+		C62B3AA924F216D600C1748A /* Checksum in Frameworks */ = {isa = PBXBuildFile; productRef = C62B3AA824F216D600C1748A /* Checksum */; };
+		C62B3AAC24F216E500C1748A /* FMDB in Frameworks */ = {isa = PBXBuildFile; productRef = C62B3AAB24F216E500C1748A /* FMDB */; };
+		C62B3AAF24F2171D00C1748A /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62B3AAE24F2171D00C1748A /* Extensions.swift */; };
+		C62B3AB424F217B200C1748A /* Methods.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62B3AB324F217B200C1748A /* Methods.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +29,9 @@
 /* Begin PBXFileReference section */
 		C62B3A9D24F216B300C1748A /* photoz */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = photoz; sourceTree = BUILT_PRODUCTS_DIR; };
 		C62B3AA024F216B300C1748A /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		C62B3AAD24F216F700C1748A /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
+		C62B3AAE24F2171D00C1748A /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		C62B3AB324F217B200C1748A /* Methods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Methods.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +39,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C62B3AA924F216D600C1748A /* Checksum in Frameworks */,
+				C62B3AAC24F216E500C1748A /* FMDB in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,6 +67,9 @@
 			isa = PBXGroup;
 			children = (
 				C62B3AA024F216B300C1748A /* main.swift */,
+				C62B3AB324F217B200C1748A /* Methods.swift */,
+				C62B3AAE24F2171D00C1748A /* Extensions.swift */,
+				C62B3AAD24F216F700C1748A /* Bridging-Header.h */,
 			);
 			path = photoz;
 			sourceTree = "<group>";
@@ -78,6 +90,10 @@
 			dependencies = (
 			);
 			name = photoz;
+			packageProductDependencies = (
+				C62B3AA824F216D600C1748A /* Checksum */,
+				C62B3AAB24F216E500C1748A /* FMDB */,
+			);
 			productName = photoz;
 			productReference = C62B3A9D24F216B300C1748A /* photoz */;
 			productType = "com.apple.product-type.tool";
@@ -106,6 +122,10 @@
 				Base,
 			);
 			mainGroup = C62B3A9424F216B200C1748A;
+			packageReferences = (
+				C62B3AA724F216D600C1748A /* XCRemoteSwiftPackageReference "Checksum" */,
+				C62B3AAA24F216E500C1748A /* XCRemoteSwiftPackageReference "fmdb" */,
+			);
 			productRefGroup = C62B3A9E24F216B300C1748A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -121,6 +141,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				C62B3AA124F216B300C1748A /* main.swift in Sources */,
+				C62B3AB424F217B200C1748A /* Methods.swift in Sources */,
+				C62B3AAF24F2171D00C1748A /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -247,6 +269,7 @@
 				DEVELOPMENT_TEAM = 3A6K89K388;
 				ENABLE_HARDENED_RUNTIME = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "photoz/Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -258,6 +281,7 @@
 				DEVELOPMENT_TEAM = 3A6K89K388;
 				ENABLE_HARDENED_RUNTIME = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "photoz/Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
@@ -284,6 +308,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C62B3AA724F216D600C1748A /* XCRemoteSwiftPackageReference "Checksum" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/rnine/Checksum";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.2;
+			};
+		};
+		C62B3AAA24F216E500C1748A /* XCRemoteSwiftPackageReference "fmdb" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ccgus/fmdb";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.7.7;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C62B3AA824F216D600C1748A /* Checksum */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C62B3AA724F216D600C1748A /* XCRemoteSwiftPackageReference "Checksum" */;
+			productName = Checksum;
+		};
+		C62B3AAB24F216E500C1748A /* FMDB */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C62B3AAA24F216E500C1748A /* XCRemoteSwiftPackageReference "fmdb" */;
+			productName = FMDB;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C62B3A9524F216B200C1748A /* Project object */;
 }
